@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".InterestMatchingActivity">
+
+    <!-- SCREEN TITLE -->
+    <TextView
+        android:id="@+id/interestsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Interest Matching"
+        android:textColor="#0d3033"
+        android:textSize="43dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TAB SWITCHER -->
+    <LinearLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/interestsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tabCreateRoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="CREATE ROOM"
+            android:textColor="#202C33"
+            android:textStyle="bold"
+            android:background="@drawable/bg_tab_inactive" />
+
+        <TextView
+            android:id="@+id/tabJoinRoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="JOIN ROOM"
+            android:textColor="#202C33"
+            android:textStyle="bold"
+            android:background="@drawable/bg_tab_active" />
+    </LinearLayout>
+
+    <!-- CONTENT CONTAINER -->
+    <FrameLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tabContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/actionButton">
+
+        <!-- CREATE ROOM LAYOUT -->
+        <ScrollView
+            android:id="@+id/createRoomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Tags Selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Interests"
+                    android:textStyle="bold"
+                    android:textColor="#202C33" />
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:chipSpacing="8dp"
+                    app:singleLine="false"
+                    android:layout_marginTop="8dp">
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Volunteer"
+                        style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Study"
+                        style="@style/Widget.MaterialComponents.Chip.Choice" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAddTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Tag"
+                        app:chipIcon="@drawable/ic_add"
+                        app:chipIconTint="@color/primary"
+                        app:closeIconEnabled="false"
+                        style="@style/Widget.MaterialComponents.Chip.Entry" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Participant Limit -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Participant Limit"
+                    android:textStyle="bold"
+                    android:textColor="#202C33" />
+                <EditText
+                    android:id="@+id/participantLimitEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 10"
+                    android:inputType="number"
+                    android:background="@drawable/buttno_all_round"
+                    android:padding="8dp"
+                    android:textColor="#202C33"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Room Name -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Room Name"
+                    android:textStyle="bold"
+                    android:textColor="#202C33" />
+                <EditText
+                    android:id="@+id/roomNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter room name"
+                    android:background="@drawable/buttno_all_round"
+                    android:padding="8dp"
+                    android:textColor="#202C33"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Description"
+                    android:textStyle="bold"
+                    android:textColor="#202C33" />
+                <EditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter room description"
+                    android:background="@drawable/buttno_all_round"
+                    android:padding="8dp"
+                    android:textColor="#202C33"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- JOIN ROOM LAYOUT -->
+        <ScrollView
+            android:id="@+id/joinRoomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- FILTER BAR ( now only in join mode ) -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#16504F"
+                        android:padding="12dp">
+
+                        <Spinner
+                            android:id="@+id/interestSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/interest_categories"
+                            android:popupBackground="#16504F"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="#DDDDDD"
+                            android:layout_marginHorizontal="8dp" />
+
+                        <Spinner
+                            android:id="@+id/sortSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/sort_options"
+                            android:popupBackground="#16504F"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Example Room Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <!-- color‐coded tag -->
+                        <TextView
+                            android:id="@+id/interestTag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buttno_all_round"
+                            android:padding="6dp"
+                            android:text="Computer Science"
+                            android:textColor="#202C33"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <!-- room title -->
+                        <TextView
+                            android:id="@+id/roomTitle1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="CS101 study"
+                            android:textColor="#202C33"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/interestTag1"
+                            app:layout_constraintTop_toBottomOf="@+id/interestTag1" />
+
+                        <!-- participant count -->
+                        <TextView
+                            android:id="@+id/participantCount1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="👤 12"
+                            android:textColor="#202C33"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@+id/roomTitle1"
+                            app:layout_constraintTop_toBottomOf="@+id/roomTitle1" />
+
+                        <!-- like count -->
+                        <TextView
+                            android:id="@+id/likeCount1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="4dp"
+                            android:text="❤️ 3"
+                            android:textColor="#E74C3C"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/participantCount1"
+                            app:layout_constraintTop_toBottomOf="@+id/roomTitle1" />
+
+                        <!-- join button -->
+                        <Button
+                            android:id="@+id/joinButton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#16504F"
+                            android:text="JOIN"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/participantCount1"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <!-- color‐coded tag -->
+                        <TextView
+                            android:id="@+id/interestTag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buttno_all_round"
+                            android:padding="6dp"
+                            android:text="Math"
+                            android:textColor="#202C33"
+                            android:textSize="12sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <!-- room title -->
+                        <TextView
+                            android:id="@+id/roomTitle2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Math learning (5 hours)"
+                            android:textColor="#202C33"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/interestTag2"
+                            app:layout_constraintTop_toBottomOf="@+id/interestTag2" />
+
+                        <!-- participant count -->
+                        <TextView
+                            android:id="@+id/participantCount2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="👤 5"
+                            android:textColor="#202C33"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@+id/roomTitle2"
+                            app:layout_constraintTop_toBottomOf="@+id/roomTitle2" />
+
+                        <!-- like count -->
+                        <TextView
+                            android:id="@+id/likeCount2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="4dp"
+                            android:text="❤️ 4"
+                            android:textColor="#E74C3C"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/participantCount2"
+                            app:layout_constraintTop_toBottomOf="@+id/roomTitle2" />
+
+                        <!-- join button -->
+                        <Button
+                            android:id="@+id/joinButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#16504F"
+                            android:text="JOIN"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/participantCount2"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <!-- color‐coded tag -->
+                        <TextView
+                            android:id="@+id/interestTag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buttno_all_round"
+                            android:padding="6dp"
+                            android:text="Cafe"
+                            android:textColor="#202C33"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- room title -->
+                        <TextView
+                            android:id="@+id/roomTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Study at the cafe"
+                            android:textColor="#202C33"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/interestTag"
+                            app:layout_constraintTop_toBottomOf="@+id/interestTag" />
+
+                        <!-- participant count -->
+                        <TextView
+                            android:id="@+id/participantCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="👤 2"
+                            android:textColor="#202C33"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@+id/roomTitle"
+                            app:layout_constraintTop_toBottomOf="@+id/roomTitle" />
+
+                        <!-- like count -->
+                        <TextView
+                            android:id="@+id/likeCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="4dp"
+                            android:text="❤️ 2"
+                            android:textColor="#E74C3C"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/participantCount"
+                            app:layout_constraintTop_toBottomOf="@+id/roomTitle" />
+
+                        <!-- join button -->
+                        <Button
+                            android:id="@+id/joinButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#16504F"
+                            android:text="JOIN"
+                            android:textColor="@android:color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/participantCount"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- add more cards here -->
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- BOTTOM ACTION BUTTON -->
+    <Button
+        android:id="@+id/actionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CREATE ROOM"
+        android:backgroundTint="#16504F"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

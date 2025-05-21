@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="#fcfcfc"
+    tools:context=".DormMatchingActivity">
+
+    <!-- SEARCH BUTTON AT BOTTOM -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SEARCH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#0d3033"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- LIVING PATTERNS SECTION -->
+    <TextView
+        android:id="@+id/livingPatternsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="LIVING PATTERNS"
+        android:textColor="#202C33"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/livingPatternsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/livingPatternsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Wake-up Time Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wake-up Time"
+                    android:textColor="#202C33"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/wakeUpTimeToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+
+                    android:text="Before"
+                    android:textColor="#202C33"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/wakeUpTimeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:padding="4dp"
+
+                    android:text="08:00 AM"
+                    android:textColor="#202C33"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Bedtime Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bedtime"
+                    android:textColor="#202C33"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bedtimeToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+
+                    android:text="After"
+                    android:textColor="#202C33"
+                    android:textSize="14sp" />
+
+                <TextView
+              android:id="@+id/bedtimeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:padding="4dp"
+                    android:text="12:00 AM"
+                    android:textColor="#202C33"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Snoring & Study Checkboxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="4dp">
+
+                <CheckBox
+                    android:id="@+id/snoringCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:text="Snoring"
+                    android:textColor="#202C33" />
+
+                <CheckBox
+                    android:id="@+id/studyInRoomCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Study in Room"
+                    android:textColor="#202C33" />
+            </LinearLayout>
+
+            <!-- Studying Input -->
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- MEALS SECTION -->
+    <TextView
+        android:id="@+id/mealsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEALS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#202C33"
+        app:layout_constraintTop_toBottomOf="@id/livingPatternsCard"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mealsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/mealsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <CheckBox
+                android:id="@+id/eatingInRoomCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:text="Eating in Room"
+                android:textColor="#202C33" />
+
+            <CheckBox
+                android:id="@+id/rentRefrigeratorCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rent Refrigerator"
+                android:textColor="#202C33" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- SHARED SPACE SECTION -->
+    <TextView
+        android:id="@+id/sharedSpaceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHARED SPACE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#202C33"
+        app:layout_constraintTop_toBottomOf="@id/mealsCard"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sharedSpaceCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/sharedSpaceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox
+                android:id="@+id/sharedShoeRackCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shared Shoe Rack"
+                android:textColor="#202C33"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Noise Level Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Noise Level"
+                    android:textStyle="bold"
+                    android:textColor="#202C33"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Low"
+                    android:textColor="#202C33"
+                    android:layout_marginEnd="8dp" />
+
+                <SeekBar
+                    android:id="@+id/noiseLevelSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressTint="#0d3033"
+                    android:thumbTint="#0d3033"
+                    android:max="100"
+                    android:progress="50" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High"
+                    android:textColor="#202C33"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Preferred Temperature Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferred Temperature"
+                    android:textStyle="bold"
+                    android:textColor="#202C33"
+                    android:layout_marginEnd="16dp" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/coolRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cool"
+                        android:textColor="#202C33"
+                        android:layout_marginEnd="16dp" />
+
+                    <RadioButton
+                        android:id="@+id/warmRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Warm"
+                        android:textColor="#202C33" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Room Cleaning Frequency Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Cleaning Frequency"
+                    android:textStyle="bold"
+                    android:textColor="#202C33"
+                    android:layout_marginEnd="16dp" />
+
+                <Spinner
+                    android:id="@+id/roomCleaningFrequencySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/cleaning_frequencies" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Dorm Matching"
+        android:textColor="#0d3033"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
