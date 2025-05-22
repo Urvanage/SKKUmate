@@ -42,43 +42,43 @@ timeline 그림 또는 표 삽입 예정
 - 학교 인증 시스템을 통한 안전한 사용자 환경 조성  
 
 # 7. 구현 내용
-### 로그인 화면  
+<로그인 화면>  
 <img src="https://github.com/user-attachments/assets/40e73f2a-5945-4a45-b569-684a2ce8c324" width="200" />
 
-### 회원가입 화면  
+<회원가입 화면>  
 <img src="https://github.com/user-attachments/assets/8f2606ed-8a62-4ad2-8dee-7091ee72af43" width="200" />
 
-### 아이디/비밀번호 찾기 화면  
+<아이디/비밀번호 찾기 화면> 
 <img src="https://github.com/user-attachments/assets/4f618f04-4dcd-43b8-b4aa-babfb9ec5cb6" width="200" />
 
-### 내 정보 화면  
+<내 정보 화면>  
 <img src="https://github.com/user-attachments/assets/0cfc20e5-8014-4cb7-b0be-c6909951fd77" width="200" />
 
-### 채팅 화면  
+<채팅 화면>  
 <img src="https://github.com/user-attachments/assets/acd72584-e62f-4427-a7e6-65fa3e526599" width="200" />
 <img src="https://github.com/user-attachments/assets/fdf3480b-a4be-4f0f-84ff-7dc465cf127f" width="200" />
 
-### 홈 화면  
+<홈 화면>  
 <img src="https://github.com/user-attachments/assets/69a93a17-edf9-4093-8251-88934e52a809" width="200" />
 
 # 8. 그 외
-### ER 다이아그램
+<ER 다이아그램>
 <img src="https://github.com/user-attachments/assets/7bb5b9b5-7316-4094-b122-315a42b5ad14" width="300" />
 
-### 밥친구 매칭
+<밥친구 매칭>
 <div style="text-align:center;">
   <img src="https://github.com/user-attachments/assets/6a779be4-8863-427d-a08b-0727f8fc37a1" width="150" />
   <img src="https://github.com/user-attachments/assets/f3b76fb6-884a-4bd8-a972-8cd5617a61f8" width="150" />
   <img src="https://github.com/user-attachments/assets/92fa161d-bef1-43c3-88ca-c66da5b24f0d" width="150" />
 </div>
 
-### 룸메이트 매칭
+<룸메이트 매칭>
 <div style="text-align:center;">
   <img src="https://github.com/user-attachments/assets/055992d1-66b2-42c0-b2e5-48d51cd2948a" width="150" />
   <img src="https://github.com/user-attachments/assets/3fdd20cd-0577-4a46-b22f-b4c302cd1f7b" width="150" />
 </div>
 
-### 관심사 매칭
+<관심사 매칭>
 <div style="text-align:center;">
   <img src="https://github.com/user-attachments/assets/595a42c9-5a66-4875-b748-575a40b25ae1" width="150" />
   <img src="https://github.com/user-attachments/assets/995e59dd-6145-4389-820f-938eaa5bf81a" width="150" />
