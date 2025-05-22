@@ -60,3 +60,9 @@ timeline 그림 또는 표 삽입 예정
 
 ### 홈 화면  
 <img src="https://github.com/user-attachments/assets/69a93a17-edf9-4093-8251-88934e52a809" width="200" />
+
+# 8. 그 외
+### ER 다이아그램
+### 밥친구 매칭
+### 룸메이트 매칭
+### 관심사 매칭
