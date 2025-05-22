@@ -1,3 +1,4 @@
+```markdown
 ## 0. 담당한 기능 개발 및 구현 기술
 - **개발 환경**: Android Studio  
 - **사용자 인증**:  
@@ -33,7 +34,8 @@
 - **백엔드 개발**: 김준하, 원태연  
 
 ## 5. 일정
-![Image](https://github.com/user-attachments/assets/02ef66b8-33d0-4e57-8c99-3570b94753a2)
+
+timeline 그림 또는 표 삽입 예정
 
 ## 6. 기대 효과
 - 학생 간 네트워킹 활성화 및 캠퍼스 커뮤니티 강화  
@@ -41,18 +43,22 @@
 - 학교 인증 시스템을 통한 안전한 사용자 환경 조성  
 
 ## 7. 구현 내용
-<로그인 화면>
-![Image](https://github.com/user-attachments/assets/40e73f2a-5945-4a45-b569-684a2ce8c324)
-<회원가입 화면>
-![Image](https://github.com/user-attachments/assets/8f2606ed-8a62-4ad2-8dee-7091ee72af43)
-<아이디/비번 찾기 화면>
-![Image](https://github.com/user-attachments/assets/4f618f04-4dcd-43b8-b4aa-babfb9ec5cb6)
-![Image](https://github.com/user-attachments/assets/658dbcc2-4c53-4f04-b85d-85d1231e2f7c)
-<내 정보 화면>
-![Image](https://github.com/user-attachments/assets/0cfc20e5-8014-4cb7-b0be-c6909951fd77)
-<채팅 화면>
-![Image](https://github.com/user-attachments/assets/acd72584-e62f-4427-a7e6-65fa3e526599)
-![Image](https://github.com/user-attachments/assets/fdf3480b-a4be-4f0f-84ff-7dc465cf127f)
-<홈 화면>
-![Image](https://github.com/user-attachments/assets/69a93a17-edf9-4093-8251-88934e52a809)
+### 로그인 화면  
+<img src="https://github.com/user-attachments/assets/40e73f2a-5945-4a45-b569-684a2ce8c324" width="200" />
 
+### 회원가입 화면  
+<img src="https://github.com/user-attachments/assets/8f2606ed-8a62-4ad2-8dee-7091ee72af43" width="200" />
+
+### 아이디/비밀번호 찾기 화면  
+<img src="https://github.com/user-attachments/assets/4f618f04-4dcd-43b8-b4aa-babfb9ec5cb6" width="200" />
+
+### 내 정보 화면  
+<img src="https://github.com/user-attachments/assets/0cfc20e5-8014-4cb7-b0be-c6909951fd77" width="200" />
+
+### 채팅 화면  
+<img src="https://github.com/user-attachments/assets/acd72584-e62f-4427-a7e6-65fa3e526599" width="200" />
+<img src="https://github.com/user-attachments/assets/fdf3480b-a4be-4f0f-84ff-7dc465cf127f" width="200" />
+
+### 홈 화면  
+<img src="https://github.com/user-attachments/assets/69a93a17-edf9-4093-8251-88934e52a809" width="200" />
+```
