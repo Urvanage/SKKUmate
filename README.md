@@ -63,15 +63,24 @@ timeline 그림 또는 표 삽입 예정
 
 # 8. 그 외
 ### ER 다이아그램
-<img width="824" alt="Image" src="https://github.com/user-attachments/assets/7bb5b9b5-7316-4094-b122-315a42b5ad14" />
+<img src="https://github.com/user-attachments/assets/7bb5b9b5-7316-4094-b122-315a42b5ad14" width="300" />
+
 ### 밥친구 매칭
-<img width="187" alt="Image" src="https://github.com/user-attachments/assets/6a779be4-8863-427d-a08b-0727f8fc37a1" />
-<img width="208" alt="Image" src="https://github.com/user-attachments/assets/f3b76fb6-884a-4bd8-a972-8cd5617a61f8" />
-<img width="209" alt="Image" src="https://github.com/user-attachments/assets/92fa161d-bef1-43c3-88ca-c66da5b24f0d" />
+<div style="text-align:center;">
+  <img src="https://github.com/user-attachments/assets/6a779be4-8863-427d-a08b-0727f8fc37a1" width="150" />
+  <img src="https://github.com/user-attachments/assets/f3b76fb6-884a-4bd8-a972-8cd5617a61f8" width="150" />
+  <img src="https://github.com/user-attachments/assets/92fa161d-bef1-43c3-88ca-c66da5b24f0d" width="150" />
+</div>
+
 ### 룸메이트 매칭
-<img width="220" alt="Image" src="https://github.com/user-attachments/assets/055992d1-66b2-42c0-b2e5-48d51cd2948a" />
-<img width="218" alt="Image" src="https://github.com/user-attachments/assets/3fdd20cd-0577-4a46-b22f-b4c302cd1f7b" />
+<div style="text-align:center;">
+  <img src="https://github.com/user-attachments/assets/055992d1-66b2-42c0-b2e5-48d51cd2948a" width="150" />
+  <img src="https://github.com/user-attachments/assets/3fdd20cd-0577-4a46-b22f-b4c302cd1f7b" width="150" />
+</div>
+
 ### 관심사 매칭
-<img width="283" alt="Image" src="https://github.com/user-attachments/assets/595a42c9-5a66-4875-b748-575a40b25ae1" />
-<img width="249" alt="Image" src="https://github.com/user-attachments/assets/995e59dd-6145-4389-820f-938eaa5bf81a" />
-<img width="249" alt="Image" src="https://github.com/user-attachments/assets/24af8f32-e1c0-4d68-a20a-af9018e98edb" />
+<div style="text-align:center;">
+  <img src="https://github.com/user-attachments/assets/595a42c9-5a66-4875-b748-575a40b25ae1" width="150" />
+  <img src="https://github.com/user-attachments/assets/995e59dd-6145-4389-820f-938eaa5bf81a" width="150" />
+  <img src="https://github.com/user-attachments/assets/24af8f32-e1c0-4d68-a20a-af9018e98edb" width="150" />
+</div>
